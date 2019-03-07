@@ -6,13 +6,15 @@
 
     <div class="plant-grid-container">
       <div *ngFor="let plant of plants | paginate: { itemsPerPage: 20, currentPage: p }" class="card">
-        <h1>{{plant.product_name}}</h1>
-        <img src={{plant.product_image}} alt={{plant.product_name}} >
-        <p>{{plant.product_description}}</p>
-        <span>${{plant.product_price}}</span>
+        <div id={{plant.id}}>
+          <h1>{{plant.product_name}}</h1>
+          <img src={{plant.product_image}} alt={{plant.product_name}} >
+          <p>{{plant.product_description}}</p>
+          <span>${{plant.product_price}}</span>
+        </div>
       </div>
     </div>
-
+      
     <pagination-controls class="pagination" (pageChange)="p =$event"></pagination-controls>
 
 </div>
