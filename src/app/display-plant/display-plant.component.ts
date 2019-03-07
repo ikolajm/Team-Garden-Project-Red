@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DatabaseService } from '../services/database.service';
 
 @Component({
   selector: 'app-display-plant',
@@ -8,14 +9,16 @@ import { Component, OnInit } from '@angular/core';
 export class DisplayPlantComponent implements OnInit {
   plants = [];
 
-  constructor() { }
+  constructor(private dbService: DatabaseService) { }
 
   ngOnInit() {
     this.getPlants();
   }
 
   getPlants() : void  {
-    
+    this.dbService.getPlants().subscribe(plants => {
+      this.plants = plants;
+    })
   }
 
 }
