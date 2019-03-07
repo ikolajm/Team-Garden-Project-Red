@@ -1,16 +1,25 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 import { AppComponent } from './app.component';
+import { DisplayPlantComponent } from './display-plant/display-plant.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { DatabaseService } from './services/database.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DisplayPlantComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    NgbModule,
+    NgxPaginationModule
   ],
-  providers: [],
+  providers: [HttpClient, DatabaseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
