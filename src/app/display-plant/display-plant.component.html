@@ -1,33 +1,18 @@
-<div class="container plant-grid">
+<div class="container plant-display">
 
-  <div *ngIf="plants.length !== 0">
+  <h1>Our Products</h1>
+  
+    <pagination-controls class="pagination" (pageChange)="p=$event"></pagination-controls>
 
-    <div *ngFor="let plant of plants">
-      <div class="card">
+    <div class="plant-grid-container">
+      <div *ngFor="let plant of plants | paginate: { itemsPerPage: 20, currentPage: p }" class="card">
         <h1>{{plant.product_name}}</h1>
         <img src={{plant.product_image}} alt={{plant.product_name}} >
         <p>{{plant.product_description}}</p>
-        <span>{{plant.price}}</span>
+        <span>${{plant.product_price}}</span>
       </div>
     </div>
 
-    <!-- <table>
-      <tr *ngFor="let plant of plants | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
-        <div class="card">
-          <h1>{{plant.product_name}}</h1>
-          <img src={{plant.product_image}} alt={{plant.product_name}} >
-          <p>{{plant.product_description}}</p>
-          <span>{{plant.price}}</span>
-        </div>
-      </tr>
-    </table> -->
-
-    <ngb-pagination
-      [(page)]="page"
-      [pageSize]="pageSize"
-      [collectionSize]="plants.length">
-    </ngb-pagination>
-
-  </div>
+    <pagination-controls class="pagination" (pageChange)="p =$event"></pagination-controls>
 
 </div>
