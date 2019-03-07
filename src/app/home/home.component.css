@@ -4,9 +4,9 @@ html, body{
 }
 
 .title{
-    font-size: 50px;
+    font-size: 50px !important;
     margin: 0;
-    color: #EDEEC9
+    color: #EDEEC9;
 }
 
 .card{
