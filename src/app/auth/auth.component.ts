@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Formbuilder, FormGroup, FormControl } from '@angular/core'
+import { Formbuilder, FormControl } from '@angular/core'
 import { FormGroup } from '@angular/forms';
 
 @Component({
@@ -21,8 +21,8 @@ export class AuthComponent implements OnInit {
     })
   }
 
-  onAuth() : void {
-    this.
-  }
+  // onAuth() : void {
+  //   this.
+  // }
 
 }
