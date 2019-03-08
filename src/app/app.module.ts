@@ -19,14 +19,14 @@ import { DatabaseService } from './services/database.service';
     AppComponent,
     DashboardComponent
     HomeComponent,
-    DisplayPlantComponent
+    DisplayPlantComponent,
     AuthComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    BrowserModule,
+    AppRoutingModule,
     HttpClientModule,
     NgbModule,
     NgxPaginationModule

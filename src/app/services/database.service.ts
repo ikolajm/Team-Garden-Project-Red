@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Plant } from '../models/plant.model';
-import { User } from '../models/user.model';
 import { Observable } from 'rxjs';
 
 const httpOptions = {
@@ -18,7 +17,7 @@ export class DatabaseService {
 
   private plantURL = 'https://efa-gardenapp-backend.herokuapp.com/api/product';
 
-  private loginURL = 'https://efa-gardenapp-backend.herokuapp.com/api/auth/login';
+  private deleteURL = 'https://efa-gardenapp-backend.herokuapp.com/api/product/'
 
   constructor(private http: HttpClient) { }
 
@@ -26,8 +25,8 @@ export class DatabaseService {
     return this.http.get<Plant[]>(this.plantURL);
   }
 
-  loginAuth(user: User) : Observable<User[]> {
-    return this.http.post<User[]>(this.loginURL, user, httpOptions);
+  deletePlant(id) {
+    return this.http.get(`${this.deleteURL}/${id}`);
   }
 
 }
