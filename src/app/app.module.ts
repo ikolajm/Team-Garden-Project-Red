@@ -13,14 +13,16 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { DisplayPlantComponent } from './display-plant/display-plant.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { DatabaseService } from './services/database.service';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent
+    DashboardComponent,
     HomeComponent,
     DisplayPlantComponent,
-    AuthComponent
+    AuthComponent,
+    AboutComponent
   ],
   imports: [
     FormsModule,
