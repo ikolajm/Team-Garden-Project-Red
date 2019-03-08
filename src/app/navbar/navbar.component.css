@@ -2,6 +2,7 @@
     font-size: 1.4rem;
     background-color: #EDEEC9;
     width: 100vw;
+    
     justify-content: space-evenly;
 }
 
@@ -9,3 +10,4 @@
     font-size: 1.5rem;
     align-items: right;
 }
+
