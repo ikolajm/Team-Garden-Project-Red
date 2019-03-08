@@ -7,6 +7,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { AuthComponent } from './auth/auth.component';
+import { AboutComponent } from './about/about.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgxPaginationModule } from 'ngx-pagination';
 
@@ -17,10 +18,11 @@ import { DatabaseService } from './services/database.service';
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent
+    DashboardComponent,
     HomeComponent,
     DisplayPlantComponent,
-    AuthComponent
+    AuthComponent,
+    AboutComponent
   ],
   imports: [
     FormsModule,
