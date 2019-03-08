@@ -1,5 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
+import { AuthComponent } from './auth/auth.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgxPaginationModule } from 'ngx-pagination';
 
@@ -11,9 +16,13 @@ import { DatabaseService } from './services/database.service';
 @NgModule({
   declarations: [
     AppComponent,
+    HomeComponent,
     DisplayPlantComponent
+    AuthComponent
   ],
   imports: [
+    FormsModule,
+    ReactiveFormsModule
     BrowserModule,
     HttpClientModule,
     NgbModule,
@@ -24,10 +33,3 @@ import { DatabaseService } from './services/database.service';
 })
 export class AppModule { }
 
-
-// this is a git test
-
-
-//this is a second test
-
-// This is a comment from Jake
