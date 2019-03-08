@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { AuthComponent } from './auth/auth.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -15,6 +17,7 @@ import { DatabaseService } from './services/database.service';
 @NgModule({
   declarations: [
     AppComponent,
+    DashboardComponent
     HomeComponent,
     DisplayPlantComponent,
     AuthComponent
@@ -23,6 +26,7 @@ import { DatabaseService } from './services/database.service';
     FormsModule,
     ReactiveFormsModule,
     BrowserModule,
+    AppRoutingModule,
     HttpClientModule,
     NgbModule,
     NgxPaginationModule
