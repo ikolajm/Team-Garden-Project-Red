@@ -14,7 +14,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 @NgModule({
   declarations: [
     AppComponent,
-    DisplayPlantComponent
+    DisplayPlantComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +23,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     NgbModule,
     NgxPaginationModule,
     AppRoutingModule,
-    NavbarComponent
+    
   ],
   providers: [HttpClient, DatabaseService],
   bootstrap: [AppComponent]
