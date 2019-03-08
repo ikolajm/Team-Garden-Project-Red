@@ -11,6 +11,7 @@
           <img src={{plant.product_image}} alt={{plant.product_name}} >
           <p>{{plant.product_description}}</p>
           <span>${{plant.product_price}}</span>
+          <span (ng-click)="removePlant(plant.id)">🗑️</span>
         </div>
       </div>
     </div>

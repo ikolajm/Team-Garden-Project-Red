@@ -7,7 +7,8 @@ import { DatabaseService } from '../services/database.service';
   styleUrls: ['./display-plant.component.css']
 })
 export class DisplayPlantComponent implements OnInit {
-  user = null;
+  admin = localStorage.getItem('role');
+  token = localStorage.getItem('token');
   plants = [];
 
   constructor(private dbService: DatabaseService) { }
@@ -19,6 +20,12 @@ export class DisplayPlantComponent implements OnInit {
   getPlants() : void  {
     this.dbService.getPlants().subscribe(plants => {
       this.plants = plants;
+    })
+  }
+
+  removePlant(id): any {
+    this.dbService.deletePlant(id).subscribe(res => {
+      this.getPlants();
     })
   }
 

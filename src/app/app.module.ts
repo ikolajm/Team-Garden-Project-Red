@@ -8,7 +8,6 @@ import { AuthComponent } from './auth/auth.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgxPaginationModule } from 'ngx-pagination';
 
-import { AppComponent } from './app.component';
 import { DisplayPlantComponent } from './display-plant/display-plant.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { DatabaseService } from './services/database.service';
@@ -17,12 +16,12 @@ import { DatabaseService } from './services/database.service';
   declarations: [
     AppComponent,
     HomeComponent,
-    DisplayPlantComponent
+    DisplayPlantComponent,
     AuthComponent
   ],
   imports: [
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
     BrowserModule,
     HttpClientModule,
     NgbModule,
