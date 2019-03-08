@@ -1,11 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-<<<<<<< HEAD
-import { Formbuilder, FormControl } from '@angular/core'
-import { FormGroup } from '@angular/forms';
-=======
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { DatabaseService } from '../services/database.service';
->>>>>>> 53df8b7edcb4efc4e75f564b86af93ff62c723b4
 
 @Component({
   selector: 'app-auth',
@@ -25,11 +20,6 @@ export class AuthComponent implements OnInit {
     })
   }
 
-<<<<<<< HEAD
-  // onAuth() : void {
-  //   this.
-  // }
-=======
   login(event) {
     event.preventDefault();
     let email = event.target.querySelector("#email").value;
@@ -59,6 +49,5 @@ export class AuthComponent implements OnInit {
     localStorage.removeItem('role');
     localStorage.removeItem('token');
   }
->>>>>>> 53df8b7edcb4efc4e75f564b86af93ff62c723b4
 
 }
